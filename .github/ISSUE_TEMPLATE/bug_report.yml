@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible problem
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please provide enough detail to reproduce the issue.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect instead?
+      placeholder: A short and precise description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide step-by-step instructions or a minimal reproduction.
+      placeholder: |
+        1. Go to ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime, browser, package manager, and relevant versions.
+      placeholder: macOS 15, Node 22, pnpm 10, Chrome 135
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and screenshots
+      description: Paste relevant logs, stack traces, or screenshots.
+      render: shell
